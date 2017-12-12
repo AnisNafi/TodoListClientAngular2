@@ -12,10 +12,18 @@
         </form>
       </mat-panel-title>
       <mat-panel-description>
-        <button type="button" mat-button (click)="openDialog()">Add</button>
-        <button type="button" mat-button (click)="delete()">Delete</button>
-        <button type="button" mat-button (click)="editListName()">Edit</button>
-        <button type="button" mat-button (click)="duplicate()">Duplicate</button>
+        <span matTooltip="Add an Item">
+          <button type="button" mat-button (click)="openDialog()">Add</button>
+        </span>
+        <span matTooltip="Delete the list!">
+          <button type="button" mat-button (click)="delete()">Delete</button>
+        </span>
+        <span matTooltip="Edit the List Name!">
+          <button type="button" mat-button (click)="editListName()">Edit</button>
+        </span>
+        <span matTooltip="Duplicate the list!">
+          <button type="button" mat-button (click)="duplicate()">Duplicate</button>
+        </span>
       </mat-panel-description>
     </mat-expansion-panel-header>
     <mat-list>

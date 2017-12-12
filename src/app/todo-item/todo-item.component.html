@@ -6,8 +6,12 @@
   </label>
   <span class="spacer"></span>
   <div class="btn-group" *ngIf="isEditingLabel()" role="group" aria-label="Basic example" style="float:right">
-    <i class="material-icons" style="margin-right:5px" (click)="openDialogModify()">update</i>
-    <i class="material-icons" mat-raised-button (click)="delete()">delete</i>
+    <span matTooltip="Modify Item!">
+      <i class="material-icons" style="margin-right:5px" (click)="openDialogModify()">update</i>
+    </span>
+    <span matTooltip="Delete Item!">
+      <i class="material-icons" mat-raised-button (click)="delete()">delete</i>
+    </span>
   </div>
 </mat-list-item>
 
@@ -15,8 +19,6 @@
 <div style="float:inherit; width:100%">
   <div *ngIf="isEditingLabel()">
     <mat-card class="item-card">
-      <mat-divider></mat-divider>
-      <br />
       <mat-card-content>
         <p>
           <strong> Difficulty :</strong> {{item.data["difficulty"]}}

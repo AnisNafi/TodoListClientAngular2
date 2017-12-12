@@ -24,7 +24,9 @@
       <textarea matInput #newAddress type="text" placeholder="Address">{{data.item.data['address']}}</textarea>
     </mat-form-field>
     <mat-dialog-actions>
-      <button mat-raised-button type="button" (click)="onCloseConfirm(newCathegorie.value, newLabel.value, newDifficulty.value, newDate.value, newDetails.value, newAddress.value)" id="submit">OK</button>
+      <span matTooltip="It is important to choose in which list to put the element!">
+        <button mat-raised-button type="button" (click)="onCloseConfirm(newCathegorie.value, newLabel.value, newDifficulty.value, newDate.value, newDetails.value, newAddress.value)" id="submit">OK</button>
+      </span>
       <button mat-raised-button type="button" (click)="onCloseCancel()">CLOSE</button>
     </mat-dialog-actions>
   </div>
