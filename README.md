@@ -1,28 +1,26 @@
 # ClientAngular2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+TP TodoList
 
-## Development server
+## Comment Installer :
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Ayant utilisé material design pour angular sur le site suivant : https://material.angular.io/
 
-## Code scaffolding
+# Voici comment l’installer :
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+npm install
+npm install -save @angular/material @angular/cdk
+npm install -save @angular/animations
+npm install -save hammerjs
+npm run prod
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+# Fonctionnement de la TodoList :
 
-## Running unit tests
+Pour ajouter une liste le principe reste le même qu’auparavant.
+Ajouter une tâche demande d’appuyer sur le bouton add sur l'entête de la liste. Ceci ouvre un pop-up avec un form a remplir
+Pour supprimer la liste (categorie), on appuie sur le delete sur l'entête de la liste
+Pour modifier ou supprimer un élément il faut cliquer sur la tâche, 2 icônes apparaissent (modifier et supprimer)
+Durant la modification, on peut également changer la catégorie de la tâche et celle-ci changera de liste
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
