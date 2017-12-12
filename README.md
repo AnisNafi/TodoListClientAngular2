@@ -9,9 +9,13 @@ Ayant utilisé material design pour angular sur le site suivant : https://materi
 ## Voici comment l’installer :
 
 npm install
+
 npm install -save @angular/material @angular/cdk
+
 npm install -save @angular/animations
+
 npm install -save hammerjs
+
 npm run prod
 
 
