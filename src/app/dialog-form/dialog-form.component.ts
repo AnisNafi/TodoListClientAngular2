@@ -60,9 +60,9 @@ export class DialogFormComponent implements OnInit {
     return this.todoListService.getList(listId).name;
   }
 
-  getDateEndDateFormat(date : Date): string {
+  getDateEndDateFormat(date): string {
     if (!date) {return ""; }
-    if (date=="") {return ""; }
+    if (date === "") {return ""; }
 
 
     return new Date(date).toISOString();

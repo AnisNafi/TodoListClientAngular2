@@ -9,7 +9,9 @@
       <input matInput #newDifficulty min="0" max="4" type="number" placeholder="Difficulty" />
     </mat-form-field>
     <mat-form-field>
-      <input matInput #newDate type="date" placeholder="Date" />
+      <input matInput #newDate [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <mat-form-field>
       <textarea matInput #newDetails type="text" placeholder="Details"></textarea>
