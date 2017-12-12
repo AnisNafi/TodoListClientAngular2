@@ -8,14 +8,17 @@
       <input matInput #newDifficulty min="0" max="4" type="number" placeholder="Difficulty" value="{{data.item.data['difficulty']}}"/>
     </mat-form-field>
     <mat-form-field>
-      <mat-select #newCathegorie placeholder="List" name="cathegorie" >
+      <mat-select #newCathegorie placeholder="List" name="cathegorie" value="{{getListNameById(data.listId)}}">
         <mat-option *ngFor="let list of getLists()" value="{{list.name}}">
           {{list.name}}
         </mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field>
-      <input matInput #newDate type="date" placeholder="Date" value="{{data.item.data['date']}}"/>
+      <input matInput #newDate [matDatepicker]="picker" placeholder="Choose a date" value="{{ getDateEndDateFormat(data.item.data['date']) }}">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+
     </mat-form-field>
     <mat-form-field>
       <textarea matInput #newDetails type="text" placeholder="Details">{{data.item.data['details']}}</textarea>
@@ -25,7 +28,7 @@
     </mat-form-field>
     <mat-dialog-actions>
       <span matTooltip="It is important to choose in which list to put the element!">
-        <button mat-raised-button type="button" (click)="onCloseConfirm(newCathegorie.value, newLabel.value, newDifficulty.value, newDate.value, newDetails.value, newAddress.value)" id="submit">OK</button>
+        <button mat-raised-button type="button" (click)="onCloseConfirm(newCathegorie.value, newLabel.value, newDifficulty.value, newDate.value, null, newAddress.value)" id="submit">OK</button>
       </span>
       <button mat-raised-button type="button" (click)="onCloseCancel()">CLOSE</button>
     </mat-dialog-actions>

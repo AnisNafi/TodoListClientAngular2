@@ -21,7 +21,9 @@ export class DialogFormComponent implements OnInit {
   ngOnInit() {
   }
 
+
   onCloseConfirm(cathegorie: string, label: string, difficulty: number, date: Date, details: string, address: string) {
+    console.log(date);
     if (label === "") {
       this.todoListService.SERVER_DELETE_ITEM(this.data.listId, this.data.item.id);
     } else if (this.todoListService.getList(this.data.listId).name !== cathegorie) {
@@ -52,5 +54,17 @@ export class DialogFormComponent implements OnInit {
       if (l.name == name) return l;
     }
     return null;
+  }
+
+  getListNameById(listId : string) : string {
+    return this.todoListService.getList(listId).name;
+  }
+
+  getDateEndDateFormat(date : Date): string {
+    if (!date) {return ""; }
+    if (date=="") {return ""; }
+
+
+    return new Date(date).toISOString();
   }
 }
