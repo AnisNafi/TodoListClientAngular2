@@ -2,11 +2,11 @@
 
 TP TodoList
 
-## Comment Installer :
+# Comment Installer :
 
 Ayant utilisé material design pour angular sur le site suivant : https://material.angular.io/
 
-# Voici comment l’installer :
+## Voici comment l’installer :
 
 npm install
 npm install -save @angular/material @angular/cdk
@@ -15,7 +15,7 @@ npm install -save hammerjs
 npm run prod
 
 
-# Fonctionnement de la TodoList :
+## Fonctionnement de la TodoList :
 
 Pour ajouter une liste le principe reste le même qu’auparavant.
 Ajouter une tâche demande d’appuyer sur le bouton add sur l'entête de la liste. Ceci ouvre un pop-up avec un form a remplir
