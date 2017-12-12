@@ -101,10 +101,10 @@ export class TodoItemComponent implements OnInit, OnChanges {
   colorLigne() {
     let color;
     const today: Date = new Date();
-    if(this.getDate() === null) color='white';
+    if (this.getDate() === null) color = 'white';
     else {
       const date: Date = new Date(this.getDate());
-      if(date.getTime() <= today.getTime()) color = "#C62828";
+      if (date.getTime() <= today.getTime()) color = "#C62828";
       else if ((date.getTime() - today.getTime() <= 172800000) && (date.getTime() > today.getTime())) color = "#FFD54F";
     }
     return color;
