@@ -1,0 +1,21 @@
+<p class="nbLists">There are {{getLists().length}} Lists</p>
+<section class="addList">
+  <form (submit)="createList(newListName.value); newListName.value=''">
+    <mat-form-field newListName.value='' >
+      <input matInput #newListName placeholder="Create a new List" />
+      <button mat-button type="button" (click)="createList(newListName.value); newListName.value=''; newListName.focus()">ADD</button>
+    </mat-form-field>
+
+  </form>
+</section>
+
+<!--
+<p>getItemsUI: {{getItemsUI() | json}}</p>
+<p>getLists: {{getLists() | json}}</p>
+-->
+
+
+<section>
+  <app-todo-list *ngFor="let list of getLists()" [list]="list" [clock]="list.clock"></app-todo-list>
+</section>
+

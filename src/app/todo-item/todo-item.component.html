@@ -1,0 +1,36 @@
+<mat-divider></mat-divider>
+<mat-list-item [ngStyle]="colorDate()" class="item" (click)="editVisibility()">
+  <mat-checkbox #isChecked [ngModel]="item.checked" (ngModelChange)="check(isChecked.checked)">  </mat-checkbox>
+  <label style="margin-left:10px">
+    {{item.label}}
+  </label>
+  <span class="spacer"></span>
+  <div class="btn-group" *ngIf="isEditingLabel()" role="group" aria-label="Basic example" style="float:right">
+    <i class="material-icons" style="margin-right:5px" (click)="openDialogModify()">update</i>
+    <i class="material-icons" mat-raised-button (click)="delete()">delete</i>
+  </div>
+</mat-list-item>
+
+
+<div style="float:inherit; width:100%">
+  <div *ngIf="isEditingLabel()">
+    <mat-card class="item-card">
+      <mat-divider></mat-divider>
+      <br />
+      <mat-card-content>
+        <p>
+          <strong> Difficulty :</strong> {{item.data["difficulty"]}}
+        </p>
+        <p>
+          <strong> Date :</strong> {{item.data["date"]}}
+        </p>
+        <p>
+          <strong> Details :</strong> {{item.data["details"]}}
+        </p>
+        <p>
+          <strong> Address :</strong> {{item.data["address"]}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

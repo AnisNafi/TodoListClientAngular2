@@ -1,0 +1,35 @@
+section.lists {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+app-todo-list {
+  margin-left: 20%;
+  width: 60%;
+}
+
+.nbLists {
+  font-family: Rockwell;
+  padding: 0.5em;
+}
+
+.addList {
+  width: 70%;
+  margin-left: 1em;
+}
+
+mat-form-field {
+  width: 85%;
+  margin-top: 50px;
+  margin-left: 35%;
+}
+
+section form {
+  width: 90%;
+}
+
+mat-form-field button {
+  float: right;
+  margin-top: -30px;
+}

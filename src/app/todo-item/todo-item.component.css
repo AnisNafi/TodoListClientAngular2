@@ -1,0 +1,40 @@
+section.toBeUpdated {
+  background-color: orangered;
+}
+
+form {
+  display: inline;
+}
+
+
+.item-card {
+  width: 400px;
+}
+
+.example-header-image {
+  background-image: url('http://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+mat-list-item:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 2px 1px rgba(0,0,0,0.1);
+  background: rgba(0,0,0,.04);
+}
+
+.material-icons:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 2px 1px rgba(0,0,0,0.1);
+  background: rgba(0,0,0,.2);
+}
+
+div mat-card {
+  width: 90%;
+}

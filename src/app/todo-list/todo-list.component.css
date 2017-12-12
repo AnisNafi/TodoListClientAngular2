@@ -1,0 +1,33 @@
+:host {
+  padding: 0em;
+  display: flex;
+  flex-flow: column;
+}
+
+:host > section.root {
+  flex: 1 1;
+  margin: 0;
+  padding: 0.25em;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+mat-expansion-panel.mat-expanded {
+  margin-bottom: 10px;
+}

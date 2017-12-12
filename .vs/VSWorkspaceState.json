@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\add-form",
+    "\\src\\app\\dialog-form",
+    "\\src\\app\\lists",
+    "\\src\\app\\todo-item",
+    "\\src\\app\\todo-list",
+    "\\src\\data"
+  ],
+  "SelectedNode": "\\src\\app\\add-form\\add-form.component.html",
+  "PreviewInSolutionExplorer": false
+}

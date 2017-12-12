@@ -1,0 +1,30 @@
+<section>
+  <mat-expansion-panel style="width:250%">
+    <mat-expansion-panel-header>
+      <mat-panel-title style="margin-top: 9px;" *ngIf="!isEditingTitle()">
+        {{list.name}}
+      </mat-panel-title>
+      <mat-panel-title style="margin-top: 9px;" *ngIf="isEditingTitle()">
+        <form (submit)="setTitle(newTitle.value)">
+          <mat-form-field>
+            <input matInput #newTitle type="text" placeholder="Title" />
+          </mat-form-field>
+        </form>
+      </mat-panel-title>
+      <mat-panel-description>
+        <button type="button" mat-button (click)="openDialog()">Add</button>
+        <button type="button" mat-button (click)="delete()">Delete</button>
+        <button type="button" mat-button (click)="editListName()">Edit</button>
+        <button type="button" mat-button (click)="duplicate()">Duplicate</button>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-list>
+      <app-todo-item *ngFor="let item of list.items"
+                     [clock]="item.clock"
+                     [item]="item"
+                     [listId]="list.id" >
+      </app-todo-item>
+    </mat-list>
+    <br />
+  </mat-expansion-panel>
+</section>

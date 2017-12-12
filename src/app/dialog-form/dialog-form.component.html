@@ -1,0 +1,32 @@
+<div>
+  <h2 class="mat-dialog-title">Modify Item :</h2>
+  <div class="mat-dialog-content form-container">
+    <mat-form-field>
+      <input matInput #newLabel placeholder="Label" value="{{data.item.label}}"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput #newDifficulty min="0" max="4" type="number" placeholder="Difficulty" value="{{data.item.data['difficulty']}}"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select #newCathegorie placeholder="List" name="cathegorie" >
+        <mat-option *ngFor="let list of getLists()" value="{{list.name}}">
+          {{list.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput #newDate type="date" placeholder="Date" value="{{data.item.data['date']}}"/>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput #newDetails type="text" placeholder="Details">{{data.item.data['details']}}</textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput #newAddress type="text" placeholder="Address">{{data.item.data['address']}}</textarea>
+    </mat-form-field>
+    <mat-dialog-actions>
+      <button mat-raised-button type="button" (click)="onCloseConfirm(newCathegorie.value, newLabel.value, newDifficulty.value, newDate.value, newDetails.value, newAddress.value)" id="submit">OK</button>
+      <button mat-raised-button type="button" (click)="onCloseCancel()">CLOSE</button>
+    </mat-dialog-actions>
+  </div>
+</div>
+
